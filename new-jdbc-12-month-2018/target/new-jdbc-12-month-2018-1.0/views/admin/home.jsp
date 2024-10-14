@@ -7,6 +7,6 @@
 <title>admin trang chu</title>
 </head>
 <body>
-<h1>xin chao lop java web 12 2018 tao la admin</h1>
+<h1>admin</h1>
 </body>
 </html>

@@ -1,0 +1,46 @@
+package com.laptrinhjavaweb.controller.admin;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns = { "/admin-home" })
+// giai
+
+public class HomeController extends HttpServlet {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * Phương thức doGet được gọi khi có yêu cầu GET đến servlet.
+     * @param request Đối tượng HttpServletRequest chứa thông tin về yêu cầu của client.
+     * @param response Đối tượng HttpServletResponse chứa thông tin về phản hồi của server.
+     * @throws ServletException Nếu có lỗi xảy ra trong quá trình xử lý servlet.
+     * @throws IOException Nếu có lỗi xảy ra trong quá trình đọc/ghi dữ liệu.
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Lấy đối tượng RequestDispatcher để chuyển tiếp yêu cầu đến trang JSP
+        RequestDispatcher rd = request.getRequestDispatcher("/views/admin/home.jsp");
+        // Chuyển tiếp yêu cầu và phản hồi đến trang JSP
+        rd.forward(request, response);
+    }
+
+    /**
+     * Phương thức doPost được gọi khi có yêu cầu POST đến servlet.
+     * @param request Đối tượng HttpServletRequest chứa thông tin về yêu cầu của client.
+     * @param response Đối tượng HttpServletResponse chứa thông tin về phản hồi của server.
+     * @throws ServletException Nếu có lỗi xảy ra trong quá trình xử lý servlet.
+     * @throws IOException Nếu có lỗi xảy ra trong quá trình đọc/ghi dữ liệu.
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Hiện tại phương thức này chưa được triển khai
+    }
+
+}
